@@ -90,7 +90,7 @@
 
 .abrf-search input {
     width: 100%;
-    padding: 9px 14px 9px 36px;
+    padding: 9px 34px 9px 14px;
     border: 1px solid var(--abrf-line);
     border-radius: 10px;
     background: var(--abrf-bg);
@@ -108,7 +108,8 @@
 
 .abrf-search .abrf-search-ico {
     position: absolute;
-    left: 12px;
+    left: auto;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
@@ -695,6 +696,138 @@
     border-radius: 999px;
     vertical-align: middle;
     margin-left: 6px;
+}
+
+/* ============================================================
+   FEATURE GRID (application-style cards)
+   ============================================================ */
+.abrf-fgroups {
+    margin: 20px 0 0;
+}
+
+.abrf-fgroup {
+    margin: 0 0 24px;
+}
+
+.abrf-fgroup-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--abrf-accent);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--abrf-line);
+}
+
+.abrf-fgroup-head::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--abrf-line), transparent);
+}
+
+.abrf-fgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 14px;
+}
+
+.abrf-fcard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--abrf-card);
+    border: 1px solid var(--abrf-line);
+    border-radius: var(--abrf-radius);
+    box-shadow: var(--abrf-shadow);
+    padding: 16px 16px 18px;
+    transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
+}
+
+.abrf-fcard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--abrf-shadow-lg);
+    border-color: #c7d2fe;
+}
+
+.abrf-fcard-ic {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    background: linear-gradient(135deg, var(--abrf-accent-soft), #e6e5fb);
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+
+.abrf-fcard-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--abrf-ink);
+    line-height: 1.35;
+}
+
+.abrf-fcard-desc {
+    font-size: 12.8px;
+    color: var(--abrf-mut);
+    margin: 0;
+    line-height: 1.55;
+}
+
+.abrf-fcard .abrf-protag {
+    align-self: flex-start;
+}
+
+/* ============================================================
+   PREV / NEXT PAGE NAVIGATION
+   ============================================================ */
+.abrf-page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 34px 0 0;
+    padding-top: 18px;
+    border-top: 1px dashed var(--abrf-line);
+}
+
+.abrf-navbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--abrf-accent);
+    background: var(--abrf-card);
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+.abrf-navbtn:hover:not(:disabled) {
+    background: var(--abrf-accent-soft);
+    box-shadow: var(--abrf-shadow);
+}
+
+.abrf-navbtn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.abrf-navinfo {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--abrf-mut);
+    white-space: nowrap;
 }
 
 /* ============================================================

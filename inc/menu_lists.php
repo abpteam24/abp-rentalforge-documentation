@@ -14,15 +14,16 @@
         </figure>
         <h4 class="abrf-h4">📋 Menu Items</h4>
         <ul class="abrf-list">
-            <li><strong>🪜 Top Quick Menu</strong> — Fast access to common actions</li>
-            <li><strong>🔨 Post Lists</strong> — Manage all rental posts</li>
-            <li><strong>🏠 Properties</strong> — Manage rental properties and inventory</li>
-            <li><strong>📋 Orders</strong> — View and manage all booking orders</li>
-            <li><strong>📦 Add Order</strong> <span class="abrf-protag">pro</span> — Manually create orders from admin panel</li>
-            <li><strong>🌐 Global Data</strong> — Configure global settings and shared data</li>
-            <li><strong>⚙️ Configuration</strong> — Manage all plugin configurations and settings</li>
-            <li><strong>🛡️ Status</strong> — System status and health information</li>
-            <li><strong>📚 Documentation</strong> — Access plugin documentation and guides</li>
+            <li><strong>⚡ Top Quick Menu</strong> — fast-access buttons (New Post, New Property, New Category, New Location).</li>
+            <li><strong>🔨 Post Lists</strong> — manage all rental posts</li>
+            <li><strong>🏠 Properties</strong> — manage rental properties and inventory</li>
+            <li><strong>📋 Orders</strong> — view and manage all booking orders</li>
+            <li><strong>➕ Order</strong> <span class="abrf-protag">pro</span> — manually create a booking from the admin panel</li>
+            <li><strong>🌐 Global Data</strong> — configure global settings and shared data</li>
+            <li><strong>⚙️ Configuration</strong> — manage all plugin configurations and settings</li>
+            <li><strong>🛡️ Status</strong> — system status and health information</li>
+            <li><strong>🔑 License</strong> <span class="abrf-protag">pro</span> — activate your RentalForge Pro license key</li>
         </ul>
+        <div class="abrf-alert abrf-note">💡 The <strong>Order</strong> and <strong>License</strong> tabs appear automatically when the <strong>RentalForge Pro</strong> plugin is active.</div>
     </section>
 <?php

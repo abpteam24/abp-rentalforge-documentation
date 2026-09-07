@@ -33,8 +33,30 @@
         const burger = wrap.querySelector('.abrf-burger');
         const backdrop = wrap.querySelector('.abrf-backdrop');
         const topBtn = wrap.querySelector('.abrf-top');
+        const prevBtn = wrap.querySelector('.abrf-page-nav .abrf-navbtn--prev');
+        const nextBtn = wrap.querySelector('.abrf-page-nav .abrf-navbtn--next');
+        const navInfo = wrap.querySelector('.abrf-page-nav .abrf-navinfo');
 
         let activeId = null;
+
+        const order = links.map(function (l) {
+            return l.getAttribute('data-abrf-target');
+        });
+
+        function updatePageNav() {
+            const idx = order.indexOf(activeId);
+            const total = order.length;
+            if (prevBtn) {
+                prevBtn.disabled = idx <= 0;
+            }
+            if (nextBtn) {
+                nextBtn.disabled = idx === -1 || idx >= total - 1;
+            }
+            if (navInfo) {
+                const label = (idx >= 0 && links[idx]) ? links[idx].textContent.replace(/\s+/g, ' ').trim() : '';
+                navInfo.textContent = (idx + 1) + ' / ' + total + ' · ' + label;
+            }
+        }
 
         function showTab(id, updateHash) {
             const page = content.querySelector('[data-abrf-tab="' + id + '"]');
@@ -68,6 +90,8 @@
                 scroller.scrollTop = 0;
             }
             window.scrollTo({ top: wrap.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
+
+            updatePageNav();
         }
 
         /* click nav links */
@@ -140,6 +164,24 @@
                 closeDrawer();
             }
         });
+
+        /* prev / next page navigation */
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+                const idx = order.indexOf(activeId);
+                if (idx > 0 && order[idx - 1]) {
+                    showTab(order[idx - 1], true);
+                }
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+                const idx = order.indexOf(activeId);
+                if (idx >= 0 && idx < order.length - 1 && order[idx + 1]) {
+                    showTab(order[idx + 1], true);
+                }
+            });
+        }
 
         /* scroll-to-top */
         if (topBtn) {

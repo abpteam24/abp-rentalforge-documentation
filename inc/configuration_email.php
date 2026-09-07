@@ -12,7 +12,7 @@
             <table class="abrf-table">
                 <thead><tr><th>Field / Option</th><th>What it does</th></tr></thead>
                 <tbody>
-                <tr><th>Send Mail ?</th><td>Turn the light <strong>ON</strong> to auto-send the booking e-mail to your client. The mail won't be sent if <strong>OFF</strong>. By default, <strong>ON</strong></td></tr>
+                <tr><th>Send Mail ?</th><td>Turn the switch <strong>ON</strong> to auto-send the booking e-mail to your client. The mail won't be sent if <strong>OFF</strong>. By default, <strong>ON</strong></td></tr>
                 <tr><th>Send pdf Ticket ?</th><td>If you would like to email with PDF ticket, turn <strong>ON</strong> otherwise the PDF won't be sent if <strong>OFF</strong>. By default, <strong>ON</strong></td></tr>
                 <tr><th>Which status send Mail ?</th><td>Please choose the order status for which the mail will be sent.</td></tr>
                 <tr><th>Mail Subject</th><td>Add a subject to your email, please. Alternatively, your site title will be used.</td></tr>
@@ -21,7 +21,7 @@
                     <td>
                         <p class="abrf-p">Please use these placeholders to get real data in your e-mail.</p>
                         <p class="abrf-p"><code class="abrf-chip">#post_name</code> : In order to print the Property Name.</p>
-                        <p class="abrf-p"><code class="abrf-chip">#client_name</code> : In order to print the Client Form.</p>
+                        <p class="abrf-p"><code class="abrf-chip">#client_name</code> : In order to print the Client Name.</p>
                         <p class="abrf-p"><code class="abrf-chip">#order_id</code> : In order to print the Order ID.</p>
                         <p class="abrf-p"><code class="abrf-chip">#pass_id</code> : In order to print the Client ID.</p>
                         <p class="abrf-p"><code class="abrf-chip">#from</code> : In order to print the Start Point.</p>
@@ -40,7 +40,7 @@
                     <td>
                         <p class="abrf-p">Please use these placeholders to get real data in your e-mail.</p>
                         <p class="abrf-p"><code class="abrf-chip">#post_name</code> : In order to print the Property Name.</p>
-                        <p class="abrf-p"><code class="abrf-chip">#client_name</code> : In order to print the Client Form.</p>
+                        <p class="abrf-p"><code class="abrf-chip">#client_name</code> : In order to print the Client Name.</p>
                         <p class="abrf-p"><code class="abrf-chip">#order_id</code> : In order to print the Order ID.</p>
                         <p class="abrf-p"><code class="abrf-chip">#pass_id</code> : In order to print the Client ID.</p>
                         <p class="abrf-p"><code class="abrf-chip">#from</code> : In order to print the Start Point.</p>

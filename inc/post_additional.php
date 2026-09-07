@@ -11,7 +11,7 @@
         <h4 class="abrf-h4">🌍 Global Additional Services</h4>
         <p class="abrf-p">From the Global Configuration panel, you can define a standard set of additional services that apply across the entire system.</p>
         <ul class="abrf-list">
-            <li><strong>👉</strong> Create global additional services (e.g. cleaning, pickup, insurance, setup, etc.)</li>
+            <li><strong>👉</strong> Create global additional services (e.g. cleaning, delivery, insurance, setup, etc.)</li>
             <li><strong>👉</strong> Enable or disable services globally</li>
             <li><strong>👉</strong> Maintain a centralized service list for all posts</li>
         </ul>

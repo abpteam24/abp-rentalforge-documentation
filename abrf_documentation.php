@@ -45,8 +45,14 @@
 			public function do_documentation(): bool|string {
 				ob_start();
 				$this->documentation();
-
-				return ob_get_clean();
+				$html = ob_get_clean();
+				// Safety net (bulletproof): page builders / themes often HTML-decode
+				// shortcode output and re-run do_shortcode() on it. A plain entity is
+				// not enough in that case, so we insert an invisible <wbr> right after
+				// every '[' — the rendered text is unchanged ("[abprf-booking]") but no
+				// shortcode regex can ever match it, no matter how many times the
+				// content is decoded and re-processed.
+				return str_replace( '[', '[<wbr>', (string) $html );
 			}
 			public function documentation(): void {
 				?>
@@ -82,6 +88,7 @@
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_date">📅 Date Configuration</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_additional">➕ Additional Services</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_client_form">🧾 Client Forms</button>
+                                    <button class="abrf-nav-link" data-abrf-target="#abrf_post_discount">✂️ Discount <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_tc">📜 Terms &amp; Conditions</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_faq">❓ FAQs</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_tax">🧾 Tax Settings</button>
@@ -100,6 +107,7 @@
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_date_global">📅 Dates</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_additional_global">💰 Additional Services</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_client_form_global">📋 Client Form</button>
+                                    <button class="abrf-nav-link" data-abrf-target="#abrf_global_discount">✂️ Global Discount <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_tc_global">🤝 T&amp;C</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_faq_global">❓ FAQ</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_category_global">🏘️ Category</button>
@@ -115,11 +123,11 @@
                                 </button>
                                 <div class="abrf-nav-sub">
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_rental_forge">🛠️ RentalForge</button>
+                                    <button class="abrf-nav-link" data-abrf-target="#abrf_on_off">🎚️ ON/OFF</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_pdf">📄 PDF <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_booking_pdf">📑 Order Lists PDF <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_csv">📑 Order Lists CSV <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_email">📧 E-mail <span class="abrf-protag">pro</span></button>
-                                    <button class="abrf-nav-link" data-abrf-target="#abrf_discount">✂️ Discount <span class="abrf-protag">pro</span></button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_slider">🖼️ Slider</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_contact">☎️ Contact Information</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_css_value">🎨 CSS Property</button>
@@ -147,6 +155,7 @@
 								require_once ABRF_DOC_DIR . '/inc/post_date.php';
 								require_once ABRF_DOC_DIR . '/inc/post_additional.php';
 								require_once ABRF_DOC_DIR . '/inc/post_client_form.php';
+								require_once ABRF_DOC_DIR . '/inc/post_discount.php';
 								require_once ABRF_DOC_DIR . '/inc/post_tc.php';
 								require_once ABRF_DOC_DIR . '/inc/post_faq.php';
 								require_once ABRF_DOC_DIR . '/inc/post_tax.php';
@@ -159,6 +168,7 @@
 								require_once ABRF_DOC_DIR . '/inc/global_date.php';
 								require_once ABRF_DOC_DIR . '/inc/global_additional.php';
 								require_once ABRF_DOC_DIR . '/inc/global_client_form.php';
+								require_once ABRF_DOC_DIR . '/inc/global_discount.php';
 								require_once ABRF_DOC_DIR . '/inc/global_tc.php';
 								require_once ABRF_DOC_DIR . '/inc/global_faq.php';
 								require_once ABRF_DOC_DIR . '/inc/global_category.php';
@@ -168,11 +178,11 @@
 								/************************/
 								require_once ABRF_DOC_DIR . '/inc/configuration.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_rental_forge.php';
+								require_once ABRF_DOC_DIR . '/inc/configuration_on_off.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_pdf.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_order_list.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_csv.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_email.php';
-								require_once ABRF_DOC_DIR . '/inc/configuration_discount.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_slider.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_contact.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_css.php';
@@ -183,6 +193,12 @@
 								require_once ABRF_DOC_DIR . '/inc/templating.php';
 								require_once ABRF_DOC_DIR . '/inc/translate.php';
 							?>
+                            <!-- PREV / NEXT NAVIGATION -->
+                            <nav class="abrf-page-nav" aria-label="Page navigation">
+                                <button class="abrf-navbtn abrf-navbtn--prev" type="button" aria-label="Previous page">← Previous</button>
+                                <span class="abrf-navinfo" aria-live="polite"></span>
+                                <button class="abrf-navbtn abrf-navbtn--next" type="button" aria-label="Next page">Next →</button>
+                            </nav>
                         </main>
                     </div>
                     <div class="abrf-backdrop"></div>

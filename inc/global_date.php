@@ -15,7 +15,7 @@
                     <tr><th>Field / Option</th><th>What it does</th></tr>
                 </thead>
                 <tbody>
-                    <tr><th>Rent Type</th><td>Choose the rental type (e.g. days, hours, minutes or travel) that applies to your items globally.</td></tr>
+                    <tr><th>Rent Type</th><td>Choose the rental type (hourly, daily, multi-day, monthly, multi-month) that applies to your items globally.</td></tr>
                     <tr><th>Available Days</th><td>Select which days of the week are available for booking. Bookings are blocked on the days you leave unselected.</td></tr>
                     <tr><th>Date Range</th><td>Define how far in advance or how far in the past bookings can be made.</td></tr>
                     <tr><th>Holiday / Off Days</th><td>Set specific dates when the item is not available for booking.</td></tr>

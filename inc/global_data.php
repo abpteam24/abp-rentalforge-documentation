@@ -21,6 +21,7 @@
                     <tr><th>Dates</th><td>Manage the default date configuration that every rental item inherits.</td></tr>
                     <tr><th>Additional Services</th><td>Create default additional services that can be offered on any rental item.</td></tr>
                     <tr><th>Client Form</th><td>Define the default customer information form fields.</td></tr>
+                    <tr><th>Global Discount <span class="abrf-protag">pro</span></th><td>Site-wide Seasonal and Early Bird discount ranges inherited by every item.</td></tr>
                     <tr><th>Terms &amp; Conditions</th><td>Set the default terms &amp; conditions text shown on every item.</td></tr>
                     <tr><th>FAQ</th><td>Manage the default frequently asked questions.</td></tr>
                     <tr><th>Category / Location / Brand</th><td>Create and manage the global categories, locations and brands used across all items.</td></tr>

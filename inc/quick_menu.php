@@ -20,5 +20,6 @@
             <li><strong>👉 Create and manage categories</strong> for better content organization</li>
             <li><strong>👉 Add new location data</strong> for filtering and management</li>
         </ul>
+        <div class="abrf-alert abrf-note">💡 These quick actions appear in the top bar of the RentalForge dashboard when WooCommerce is active. New items open instantly in a popup — no page reload needed.</div>
     </section>
 <?php
