@@ -33,6 +33,15 @@
             <li>👉 Organized table view for easy scanning and management</li>
         </ul>
 
+        <h4 class="abrf-h4">🔁 Rent Status &amp; Handover</h4>
+        <ul class="abrf-list">
+            <li>👉 Every row shows its <strong>rent status</strong> (Waiting, In Rent, Completed, Delay, Canceled) alongside the WooCommerce order status.</li>
+            <li>👉 <strong>Mark Delivered</strong> — shown while a booking is still waiting; hands the item over and moves it to <strong>In Rent</strong>.</li>
+            <li>👉 <strong>Mark Received</strong> — shown while a booking is <strong>In Rent</strong>; takes the item back, releases the security deposit and completes the order.</li>
+            <li>👉 Once a booking reaches its final stage the buttons are replaced by a plain status label.</li>
+            <li>👉 Delivery and return timestamps are stored with the order automatically when these actions are used.</li>
+        </ul>
+
         <h4 class="abrf-h4">📄 PDF & CSV <span class="abrf-protag">pro</span></h4>
         <ul class="abrf-list">
             <li>👉 <strong>Order List PDF:</strong> Download the filtered orders as a branded PDF document with one click.</li>

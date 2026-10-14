@@ -262,6 +262,7 @@
 .abrf-content {
 	padding: 26px 30px 60px;
 	min-height: 560px;
+	max-width: 1120px;
 }
 .abrf-page {
 	display: none;

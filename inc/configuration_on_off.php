@@ -15,6 +15,8 @@
                 <thead><tr><th>Switch</th><th>What it controls</th></tr></thead>
                 <tbody>
                 <tr><th>Rent Date Time Rule</th><td>Which rent rules are allowed for the whole site (multi-select of hourly / daily / multi-day / monthly / multi-month).</td></tr>
+                <tr><th>Auto Delivery</th><td>When <strong>ON</strong>, a booking is moved to <strong>In Rent</strong> automatically as soon as its start date/time passes. When <strong>OFF</strong>, the admin hands the item over with the <strong>Mark Delivered</strong> button. By default, <strong>ON</strong></td></tr>
+                <tr><th>Auto Return</th><td>When <strong>ON</strong>, a booking is moved to <strong>Completed</strong> automatically once its end date/time passes. When <strong>OFF</strong>, the admin completes it with the <strong>Mark Received</strong> button. By default, <strong>ON</strong></td></tr>
                 <tr><th>Post SKU</th><td>Show the SKU field when adding or editing a rental post.</td></tr>
                 <tr><th>Post Sub Title</th><td>Show the sub-title field for rental posts.</td></tr>
                 <tr><th>Post Icon</th><td>Show the icon field that gives each post a small frontend icon.</td></tr>

@@ -10,7 +10,7 @@
         <p class="abrf-lead">Thank you so much for choosing <strong>RentalForge</strong>. This guide is written for beginners — follow the steps below and your rental website will be ready in a few minutes.</p>
         <h4 class="abrf-h4">📦 1. What you need</h4>
         <ul class="abrf-list">
-            <li><strong>👉 WordPress 6.0 or newer, and PHP 8.0 or newer.</strong></li>
+            <li><strong>👉 WordPress 6.2 or newer, and PHP 8.0 or newer.</strong></li>
             <li><strong>👉 WooCommerce</strong> installed and activated — RentalForge builds on it for prices, cart and orders.</li>
             <li><strong>👉 ABP RentalForge</strong> (free) installed and active.</li>
             <li><strong>👉 Optional:</strong> the <strong>Pro</strong> <span class="abrf-protag">pro</span> version for PDF, E-mail, CSV, Discount and Location Stock features.</li>
@@ -42,9 +42,9 @@
         </div>
         <h4 class="abrf-h4">ℹ️ About this documentation</h4>
         <ul class="abrf-list">
-            <li><strong>👉 Version:</strong> 1.0.0</li>
+            <li><strong>👉 Version:</strong> 2.1.1</li>
             <li><strong>👉 Author:</strong> <a href="https://abp-team.com" target="_blank">ABPTEAM</a></li>
-            <li><strong>👉 Last Updated:</strong> 06 September 2026</li>
+            <li><strong>👉 Last Updated:</strong> 13 October 2026</li>
         </ul>
         <div class="abrf-alert abrf-note">💡 If you have any questions that are beyond the scope of this help file, don't hesitate to contact us through the <a target="_blank" href="https://abp-team.com/support-desk/">Support Page</a>.</div>
     </section>

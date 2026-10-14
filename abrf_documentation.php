@@ -3,7 +3,7 @@
 	 * Plugin Name: ABP RentalForge - Documentation
 	 * Plugin URI:
 	 * Description: Standalone documentation for ABP RentalForge (free & pro). No admin menu. Display it anywhere with the [abrf-documentation] shortcode. Fully independent markup/CSS/JS (prefix: abrf) so it never conflicts with the rental plugin.
-	 * Version: 2.0.0
+	 * Version: 2.1.1
 	 * Author: abpteam
 	 * Author URI: http://www.abp-team.com/
 	 * Text Domain: abrf_documentation
@@ -38,8 +38,8 @@
 				}
 				$enqueue = (bool) apply_filters( 'abrf_doc_enqueue', $enqueue );
 				if ( $enqueue ) {
-					wp_enqueue_style( 'abrf-documentation', ABRF_DOC_URL . '/assets/css/documentation.css', array(), '2.0.0' );
-					wp_enqueue_script( 'abrf-documentation', ABRF_DOC_URL . '/assets/js/documentation.js', array(), '2.0.0', true );
+					wp_enqueue_style( 'abrf-documentation', ABRF_DOC_URL . '/assets/css/documentation.css', array(), '2.1.1' );
+					wp_enqueue_script( 'abrf-documentation', ABRF_DOC_URL . '/assets/js/documentation.js', array(), '2.1.1', true );
 				}
 			}
 			public function do_documentation(): bool|string {
@@ -76,6 +76,7 @@
                             <button class="abrf-nav-link" data-abrf-target="#abrf_feature"><span class="abrf-nl-ic">⭐</span>Features</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_application"><span class="abrf-nl-ic">📌</span>Applications</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_menu_lists"><span class="abrf-nl-ic">🧭</span>Menu Overview</button>
+                            <button class="abrf-nav-link" data-abrf-target="#abrf_dashboard"><span class="abrf-nl-ic">📊</span>Dashboard</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_quick_menu"><span class="abrf-nl-ic">⚡</span>Quick Menu</button>
 
                             <div class="abrf-nav-group">
@@ -97,6 +98,7 @@
 
                             <button class="abrf-nav-link" data-abrf-target="#abrf_properties"><span class="abrf-nl-ic">🏠</span>Properties</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_orders"><span class="abrf-nl-ic">📦</span>Orders</button>
+                            <button class="abrf-nav-link" data-abrf-target="#abrf_my_account"><span class="abrf-nl-ic">👤</span>My Account Bookings</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_create_order"><span class="abrf-nl-ic">➕</span>Add Order <span class="abrf-protag">pro</span></button>
 
                             <div class="abrf-nav-group">
@@ -114,6 +116,7 @@
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_location_global">📍 Location</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_brand_global">🏷️ Brands</button>
                                     <button class="abrf-nav-link" data-abrf-target="#abrf_feature_global">🔗 Feature</button>
+                                    <button class="abrf-nav-link" data-abrf-target="#abrf_partial_payment">💰 Partial Payment <span class="abrf-protag">pro</span></button>
                                 </div>
                             </div>
 
@@ -134,7 +137,6 @@
                                 </div>
                             </div>
 
-                            <button class="abrf-nav-link" data-abrf-target="#abrf_status"><span class="abrf-nl-ic">🛡️</span>Status</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_license_pro"><span class="abrf-nl-ic">🔑</span>License <span class="abrf-protag">pro</span></button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_shortcode"><span class="abrf-nl-ic">🔗</span>Shortcodes</button>
                             <button class="abrf-nav-link" data-abrf-target="#abrf_template"><span class="abrf-nl-ic">🧩</span>Templating</button>
@@ -147,6 +149,7 @@
 								require_once ABRF_DOC_DIR . '/inc/features.php';
 								require_once ABRF_DOC_DIR . '/inc/application.php';
 								require_once ABRF_DOC_DIR . '/inc/menu_lists.php';
+								require_once ABRF_DOC_DIR . '/inc/dashboard.php';
 								require_once ABRF_DOC_DIR . '/inc/quick_menu.php';
 								/************************/
 								require_once ABRF_DOC_DIR . '/inc/post_menu.php';
@@ -162,6 +165,7 @@
 								/************************/
 								require_once ABRF_DOC_DIR . '/inc/property_list.php';
 								require_once ABRF_DOC_DIR . '/inc/order_list.php';
+								require_once ABRF_DOC_DIR . '/inc/my_account.php';
 								require_once ABRF_DOC_DIR . '/inc/add_order.php';
 								/************************/
 								require_once ABRF_DOC_DIR . '/inc/global_data.php';
@@ -175,6 +179,7 @@
 								require_once ABRF_DOC_DIR . '/inc/global_location.php';
 								require_once ABRF_DOC_DIR . '/inc/global_brand.php';
 								require_once ABRF_DOC_DIR . '/inc/global_feature.php';
+								require_once ABRF_DOC_DIR . '/inc/global_partial_payment.php';
 								/************************/
 								require_once ABRF_DOC_DIR . '/inc/configuration.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_rental_forge.php';
@@ -187,7 +192,6 @@
 								require_once ABRF_DOC_DIR . '/inc/configuration_contact.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_css.php';
 								/************************/
-								require_once ABRF_DOC_DIR . '/inc/status.php';
 								require_once ABRF_DOC_DIR . '/inc/configuration_license.php';
 								require_once ABRF_DOC_DIR . '/inc/shortcode.php';
 								require_once ABRF_DOC_DIR . '/inc/templating.php';

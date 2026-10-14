@@ -14,16 +14,16 @@
         </figure>
         <h4 class="abrf-h4">📋 Menu Items</h4>
         <ul class="abrf-list">
-            <li><strong>⚡ Top Quick Menu</strong> — fast-access buttons (New Post, New Property, New Category, New Location).</li>
-            <li><strong>🔨 Post Lists</strong> — manage all rental posts</li>
-            <li><strong>🏠 Properties</strong> — manage rental properties and inventory</li>
-            <li><strong>📋 Orders</strong> — view and manage all booking orders</li>
-            <li><strong>➕ Order</strong> <span class="abrf-protag">pro</span> — manually create a booking from the admin panel</li>
-            <li><strong>🌐 Global Data</strong> — configure global settings and shared data</li>
-            <li><strong>⚙️ Configuration</strong> — manage all plugin configurations and settings</li>
-            <li><strong>🛡️ Status</strong> — system status and health information</li>
-            <li><strong>🔑 License</strong> <span class="abrf-protag">pro</span> — activate your RentalForge Pro license key</li>
+            <li><strong>⚡ Top Quick Menu</strong> — fast-access buttons in the top bar (New Post, New Property, New Category, New Location).</li>
+            <li><strong>📊 Dashboard</strong> — the default screen: rental KPIs, recent orders, quick actions and the System Status tools.</li>
+            <li><strong>📝 Post Lists</strong> — manage all rental posts.</li>
+            <li><strong>🏠 Properties</strong> — manage rental properties and inventory.</li>
+            <li><strong>📋 Orders</strong> — view and manage all booking orders.</li>
+            <li><strong>➕ Order</strong> <span class="abrf-protag">pro</span> — manually create a booking from the admin panel.</li>
+            <li><strong>🌐 Global Data</strong> — configure global settings and shared data.</li>
+            <li><strong>⚙️ Configuration</strong> — manage all plugin configurations and settings.</li>
+            <li><strong>📘 Documentation</strong> — the built-in step-by-step guide inside the plugin.</li>
         </ul>
-        <div class="abrf-alert abrf-note">💡 The <strong>Order</strong> and <strong>License</strong> tabs appear automatically when the <strong>RentalForge Pro</strong> plugin is active.</div>
+        <div class="abrf-alert abrf-note">💡 The <strong>Order</strong> tab appears automatically when the <strong>RentalForge Pro</strong> plugin is active. The Pro <strong>License</strong> is not a menu tab — it is activated from the <strong>License card in the Dashboard sidebar</strong> (see the License Activation section).</div>
     </section>
 <?php

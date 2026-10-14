@@ -22,6 +22,8 @@
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🗺️</div><div class="abrf-fcard-title">Geo Based Search</div><p class="abrf-fcard-desc">Search rentals by latitude/longitude, service radius or drawn polygon areas.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🌍</div><div class="abrf-fcard-title">Multi-Currency Support</div><p class="abrf-fcard-desc">Work with any WooCommerce currency configuration.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📱</div><div class="abrf-fcard-title">Fully Responsive Design</div><p class="abrf-fcard-desc">Booking forms and listings adapt to every screen size out of the box.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🧑</div><div class="abrf-fcard-title">Guest &amp; Customer Profiles</div><p class="abrf-fcard-desc">Store customer details and a complete booking history for every guest.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🎚️</div><div class="abrf-fcard-title">Feature Toggle System</div><p class="abrf-fcard-desc">Global ON / OFF switches let you enable or disable any module site-wide.</p></div>
                 </div>
             </div>
             <div class="abrf-fgroup">
@@ -44,6 +46,7 @@
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🔢</div><div class="abrf-fcard-title">Quantity Control</div><p class="abrf-fcard-desc">Min / max and reserved quantity per item or per location.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📅</div><div class="abrf-fcard-title">Availability Management</div><p class="abrf-fcard-desc">Day-wise schedules, special dates and availability overrides.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🧾</div><div class="abrf-fcard-title">WooCommerce Tax &amp; Cart</div><p class="abrf-fcard-desc">Native WooCommerce integration for tax, cart, checkout and orders.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🧮</div><div class="abrf-fcard-title">Automatic Dynamic Pricing</div><p class="abrf-fcard-desc">The total recalculates instantly as customers change dates, duration, quantity and options.</p></div>
                 </div>
             </div>
             <div class="abrf-fgroup">
@@ -53,6 +56,7 @@
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🧾</div><div class="abrf-fcard-title">Client Information Forms</div><p class="abrf-fcard-desc">Global form configuration and custom per-post forms.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">❓</div><div class="abrf-fcard-title">FAQ &amp; Terms Support</div><p class="abrf-fcard-desc">Global and per-post FAQs plus fully editable terms &amp; conditions.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">🛒</div><div class="abrf-fcard-title">Booking / Order Management</div><p class="abrf-fcard-desc">Complete order list with filters, statuses and customer details.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">👤</div><div class="abrf-fcard-title">Customer My Account Bookings</div><p class="abrf-fcard-desc">A "My Bookings" tab in WooCommerce My Account where customers review their own rentals, prices and status.</p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📋</div><div class="abrf-fcard-title">Backend Order Management</div><p class="abrf-fcard-desc">Create bookings for customers straight from the admin dashboard. <span class="abrf-protag">pro</span></p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">✔️</div><div class="abrf-fcard-title">Check-in Management</div><p class="abrf-fcard-desc">Mark items as checked in from the order list. <span class="abrf-protag">pro</span></p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📑</div><div class="abrf-fcard-title">Order Lists PDF</div><p class="abrf-fcard-desc">Download the full order list as a styled PDF. <span class="abrf-protag">pro</span></p></div>
@@ -61,7 +65,11 @@
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📧</div><div class="abrf-fcard-title">E-mails with PDF</div><p class="abrf-fcard-desc">Automatic booking e-mails with optional PDF ticket attachment. <span class="abrf-protag">pro</span></p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">✂️</div><div class="abrf-fcard-title">Seasonal &amp; Early Bird Discounts</div><p class="abrf-fcard-desc">Global, per-post and per-property discount ranges. <span class="abrf-protag">pro</span></p></div>
                     <div class="abrf-fcard"><div class="abrf-fcard-ic">📍</div><div class="abrf-fcard-title">Location Wise Stock</div><p class="abrf-fcard-desc">Separate price, stock and deposit for each branch or location. <span class="abrf-protag">pro</span></p></div>
-                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🔁</div><div class="abrf-fcard-title">Clone Post / Property</div><p class="abrf-fcard-desc">Duplicate any rental post or property in one click.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🔁</div><div class="abrf-fcard-title">Clone &amp; Move Post / Property</div><p class="abrf-fcard-desc">Duplicate any rental post or property, or move its rental configuration to another post.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🚚</div><div class="abrf-fcard-title">Rental Order Status Workflow</div><p class="abrf-fcard-desc">Waiting → In Rent → Completed with one-click Mark Delivered and Mark Received actions.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">🔄</div><div class="abrf-fcard-title">Auto Delivery &amp; Return</div><p class="abrf-fcard-desc">Optional global switches that advance rentals to In Rent and Completed automatically.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">💵</div><div class="abrf-fcard-title">Dashboard Deliveries &amp; Collections</div><p class="abrf-fcard-desc">Today's deliveries and collections with Due today / Overdue / Upcoming chips, deposit tracking and one-click Mark Delivered / Mark Received.</p></div>
+                    <div class="abrf-fcard"><div class="abrf-fcard-ic">💰</div><div class="abrf-fcard-title">Partial Payment</div><p class="abrf-fcard-desc">Let customers pay a deposit at checkout and settle the balance later. <span class="abrf-protag">pro</span></p></div>
                 </div>
             </div>
         </div>

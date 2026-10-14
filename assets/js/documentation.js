@@ -125,23 +125,29 @@
         if (searchInput) {
             searchInput.addEventListener('input', function () {
                 const q = searchInput.value.trim().toLowerCase();
+                /* first pass: show / hide every nav link (top-level and grouped) */
                 links.forEach(function (l) {
-                    const txt = l.textContent.toLowerCase();
-                    const group = l.closest('.abrf-nav-group');
-                    let visible = true;
-                    if (q) {
-                        visible = txt.indexOf(q) !== -1;
-                        l.classList.toggle('is-active', visible);
-                    } else {
-                        l.classList.remove('is-active');
+                    const id = l.getAttribute('data-abrf-target');
+                    const visible = !q || l.textContent.toLowerCase().indexOf(q) !== -1;
+                    l.style.display = visible ? '' : 'none';
+                    /* while searching highlight the matches; when cleared restore the real active page */
+                    l.classList.toggle('is-active', q ? visible : (id === activeId));
+                });
+                /* second pass: hide group headers that have no matching children */
+                Array.prototype.forEach.call(nav.querySelectorAll('.abrf-nav-group'), function (group) {
+                    const sub = group.querySelector('.abrf-nav-sub');
+                    let anyVisible = false;
+                    if (sub) {
+                        Array.prototype.forEach.call(sub.querySelectorAll('.abrf-nav-link'), function (l) {
+                            if (l.style.display !== 'none') {
+                                anyVisible = true;
+                            }
+                        });
+                        sub.style.display = anyVisible ? '' : 'none';
                     }
-                    if (group) {
-                        group.classList.toggle('is-filtered', visible);
-                        if (q) {
-                            l.style.display = visible ? '' : 'none';
-                        } else {
-                            l.style.display = '';
-                        }
+                    const toggle = group.querySelector('.abrf-nav-toggle');
+                    if (toggle) {
+                        toggle.style.display = anyVisible ? '' : 'none';
                     }
                 });
             });

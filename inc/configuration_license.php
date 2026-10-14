@@ -17,7 +17,7 @@
         <h4 class="abrf-h4">⚙️ 2. Activate the license</h4>
         <p class="abrf-p">Activate on your <strong>live website</strong> — not on a demo or staging site. Each key is locked to the site where it is first activated and allows a limited number of activations. Activating on a staging site consumes a slot and will not license your live site.</p>
         <ul class="abrf-list">
-            <li><strong>👉</strong> Go to <strong>RentalForge → License</strong> in the admin menu.</li>
+            <li><strong>👉</strong> Go to the <strong>RentalForge Dashboard</strong> and find the <strong>License</strong> card in the sidebar.</li>
             <li><strong>👉</strong> Paste your license key in the <strong>License Key</strong> field.</li>
             <li><strong>👉</strong> Click <strong>Activate License</strong>.</li>
             <li><strong>👉</strong> A green <strong>Active</strong> badge confirms your key is working.</li>
@@ -38,13 +38,13 @@
         </div>
         <h4 class="abrf-h4">🔄 4. Move to another site</h4>
         <ul class="abrf-list">
-            <li><strong>👉</strong> From the old site: <strong>RentalForge → License → Deactivate License</strong>.</li>
+            <li><strong>👉</strong> From the old site: open the <strong>RentalForge Dashboard → License card → Deactivate License</strong>.</li>
             <li><strong>👉</strong> From the new site: activate the same key again.</li>
             <li><strong>👉</strong> Auto-updates are handled through the store — renew your license to keep receiving updates.</li>
         </ul>
         <ol class="abrf-steps">
             <li>Copy the key from your ABP Team account.</li>
-            <li>Paste it in <strong>RentalForge → License</strong>.</li>
+            <li>Paste it in the <strong>License</strong> card on the RentalForge <strong>Dashboard</strong>.</li>
             <li>Click <strong>Activate License</strong> and confirm the <strong>Active</strong> badge.</li>
         </ol>
     </section>
